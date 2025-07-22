@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Plataforma de Juegos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-gamepad"></i>
+                <span>GameZone</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#games" class="nav-link">Juegos</a></li>
+                <li><a href="#leaderboard" class="nav-link">Ranking</a></li>
+                <li><a href="#about" class="nav-link">Acerca de</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a <span class="highlight">GameZone</span></h1>
+            <p>La mejor plataforma de juegos online. Diviértete con nuestros juegos clásicos y modernos.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3 id="total-games">8</h3>
+                    <p>Juegos Disponibles</p>
+                </div>
+                <div class="stat">
+                    <h3 id="players-online">1,247</h3>
+                    <p>Jugadores Online</p>
+                </div>
+                <div class="stat">
+                    <h3 id="games-played">15,892</h3>
+                    <p>Partidas Jugadas</p>
+                </div>
+            </div>
+            <a href="#games" class="cta-button">
+                <i class="fas fa-play"></i>
+                Jugar Ahora
+            </a>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-icons">
+                <i class="fas fa-dice"></i>
+                <i class="fas fa-puzzle-piece"></i>
+                <i class="fas fa-chess"></i>
+                <i class="fas fa-rocket"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games-section">
+        <div class="container">
+            <h2 class="section-title">Selecciona tu Juego</h2>
+            <div class="games-grid">
+                <!-- Tic Tac Toe -->
+                <div class="game-card" data-game="tictactoe">
+                    <div class="game-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Tic Tac Toe</h3>
+                    <p>El clásico juego de tres en raya. ¡Desafía a un amigo!</p>
+                    <div class="game-stats">
+                        <span><i class="fas fa-users"></i> 2 Jugadores</span>
+                        <span><i class="fas fa-clock"></i> 5 min</span>
+                    </div>
+                    <button class="play-btn">Jugar</button>
+                </div>
+
+                <!-- Snake Game -->
+                <div class="game-card" data-game="snake">
+                    <div class="game-icon">
+                        <i class="fas fa-dragon"></i>
+                    </div>
+                    <h3>Snake</h3>
+                    <p>Controla la serpiente y come la mayor cantidad de comida posible.</p>
+                    <div class="game-stats">
+                        <span><i class="fas fa-user"></i> 1 Jugador</span>
+                        <span><i class="fas fa-trophy"></i> Récord</span>
+                    </div>
+                    <button class="play-btn">Jugar</button>
+                </div>
+
+                <!-- Memory Game -->
+                <div class="game-card" data-game="memory">
+                    <div class="game-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Memory</h3>
+                    <p>Pon a prueba tu memoria con este juego de cartas.</p>
+                    <div class="game-stats">
+                        <span><i class="fas fa-user"></i> 1 Jugador</span>
+                        <span><i class="fas fa-clock"></i> Tiempo</span>
+                    </div>
+                    <button class="play-btn">Jugar</button>
+                </div>
+
+                <!-- Puzzle -->
+                <div class="game-card" data-game="puzzle">
+                    <div class="game-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Puzzle Deslizante</h3>
+                    <p>Resuelve el puzzle moviendo las piezas al lugar correcto.</p>
+                    <div class="game-stats">
+                        <span><i class="fas fa-user"></i> 1 Jugador</span>
+                        <span><i class="fas fa-star"></i> Desafío</span>
+                    </div>
+                    <button class="play-btn">Jugar</button>
+                </div>
+
+                <!-- Rock Paper Scissors -->
+                <div class="game-card" data-game="rps">
+                    <div class="game-icon">
+                        <i class="fas fa-hand-rock"></i>
+                    </div>
+                    <h3>Piedra, Papel, Tijera</h3>
+                    <p>El juego clásico contra la computadora.</p>
+                    <div class="game-stats">
+                        <span><i class="fas fa-robot"></i> vs IA</span>
+                        <span><i class="fas fa-lightning-bolt"></i> Rápido</span>
+                    </div>
+                    <button class="play-btn">Jugar</button>
+                </div>
+
+                <!-- UNO Card Game -->
+                <div class="game-card" data-game="uno">
+                    <div class="game-icon">
+                        <i class="fas fa-clone"></i>
+                    </div>
+                    <h3>UNO</h3>
+                    <p>El famoso juego de cartas contra la computadora.</p>
+                    <div class="game-stats">
+                        <span><i class="fas fa-robot"></i> vs IA</span>
+                        <span><i class="fas fa-fire"></i> Adictivo</span>
+                    </div>
+                    <button class="play-btn">Jugar</button>
+                </div>
+
+                <!-- Flappy Bird -->
+                <div class="game-card" data-game="flappy">
+                    <div class="game-icon">
+                        <i class="fas fa-dove"></i>
+                    </div>
+                    <h3>Flappy Bird</h3>
+                    <p>Ayuda al pájaro a volar entre los obstáculos.</p>
+                    <div class="game-stats">
+                        <span><i class="fas fa-user"></i> 1 Jugador</span>
+                        <span><i class="fas fa-medal"></i> Desafío</span>
+                    </div>
+                    <button class="play-btn">Jugar</button>
+                </div>
+
+                <!-- Number Guessing -->
+                <div class="game-card" data-game="guess">
+                    <div class="game-icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <h3>Adivina el Número</h3>
+                    <p>¿Puedes adivinar el número secreto en pocos intentos?</p>
+                    <div class="game-stats">
+                        <span><i class="fas fa-user"></i> 1 Jugador</span>
+                        <span><i class="fas fa-brain"></i> Lógica</span>
+                    </div>
+                    <button class="play-btn">Jugar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Container -->
+    <div id="game-container" class="game-container hidden">
+        <div class="game-header">
+            <h2 id="current-game-title">Juego</h2>
+            <div class="game-controls">
+                <button id="pause-btn" class="control-btn"><i class="fas fa-pause"></i></button>
+                <button id="restart-btn" class="control-btn"><i class="fas fa-redo"></i></button>
+                <button id="close-btn" class="control-btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="game-info">
+            <div class="score">Puntuación: <span id="score">0</span></div>
+            <div class="level">Nivel: <span id="level">1</span></div>
+            <div class="time">Tiempo: <span id="time">00:00</span></div>
+        </div>
+        <div id="game-area" class="game-area">
+            <!-- Aquí se cargarán los juegos -->
+        </div>
+        <div class="game-instructions">
+            <p id="instructions">Usa las teclas de flecha para moverte</p>
+        </div>
+    </div>
+
+    <!-- Leaderboard Section -->
+    <section id="leaderboard" class="leaderboard">
+        <div class="container">
+            <h2 class="section-title">Tabla de Clasificación</h2>
+            <div class="leaderboard-tabs">
+                <button class="tab-btn active" data-game="all">Todos los Juegos</button>
+                <button class="tab-btn" data-game="snake">Snake</button>
+                <button class="tab-btn" data-game="uno">UNO</button>
+                <button class="tab-btn" data-game="memory">Memory</button>
+            </div>
+            <div class="leaderboard-content">
+                <div class="leaderboard-table">
+                    <div class="table-header">
+                        <span>Posición</span>
+                        <span>Jugador</span>
+                        <span>Juego</span>
+                        <span>Puntuación</span>
+                        <span>Fecha</span>
+                    </div>
+                    <div id="leaderboard-entries">
+                        <!-- Se llenará dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Acerca de GameZone</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>La Mejor Experiencia de Juegos Online</h3>
+                    <p>GameZone es una plataforma diseñada para ofrecer entretenimiento de calidad con los mejores juegos clásicos y modernos. Desde simples juegos de lógica hasta desafiantes arcade, tenemos algo para todos.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Responsive</h4>
+                            <p>Juega desde cualquier dispositivo</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-save"></i>
+                            <h4>Progreso Guardado</h4>
+                            <p>Tu progreso se guarda automáticamente</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-trophy"></i>
+                            <h4>Competencias</h4>
+                            <p>Compite por los mejores puntajes</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <h4>Rendimiento</h4>
+                            <p>Juegos optimizados y fluidos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-gamepad"></i>
+                    <span>GameZone</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Inicio</a>
+                    <a href="#games">Juegos</a>
+                    <a href="#leaderboard">Ranking</a>
+                    <a href="#about">Acerca de</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-icon">
+                <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="loading-text">Cargando juego...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
